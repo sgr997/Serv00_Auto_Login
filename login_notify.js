@@ -99,7 +99,7 @@ async function delayTime(ms) {
   };
 
   const options = {
-    url: `${BncrHost}/api/qinglongMessage`,
+    url: `${BncrHost}/api/notify`,
     method: 'POST',
     data: `title=${encodeURIComponent(logData.title)}&message=${encodeURIComponent(logData.message)}&token=${BncrToken}`,
     headers: {
@@ -109,7 +109,7 @@ async function delayTime(ms) {
 
   try {
     const response = await axios(options);
-    if (response.data.code === 200) {
+    if (response.data === 'ok') {
       console.log('Bncr发送通知消息成功🎉');
     } else {
       console.log(`Bncr发送通知调用API失败：${response.data.msg}`);
