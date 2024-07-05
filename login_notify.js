@@ -14,7 +14,7 @@ async function delayTime(ms) {
   // 读取 accounts.json 中的 JSON 字符串
   const configJson = fs.readFileSync('accounts.json', 'utf-8');
   const config = JSON.parse(configJson);
-  const { BncrHost, BncrToken, accounts } = config;
+  const { accounts } = config;
 
   const bncrConfigJson = fs.readFileSync('bncr.json', 'utf-8');
   const bncrConfig = JSON.parse(bncrConfigJson);
