@@ -22,6 +22,8 @@ async function delayTime(ms) {
 
   let logs = [];
 
+  console.log(`共${accounts.lenght}个账号`)
+
   for (const account of accounts) {
     const { username, password, panelnum } = account;
 
