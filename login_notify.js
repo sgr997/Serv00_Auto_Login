@@ -109,7 +109,7 @@ async function delayTime(ms) {
 
   try {
     const response = await axios(options);
-    if (response.data === 'ok') {
+    if (response.data.success) {
       console.log('Bncr发送通知消息成功🎉');
     } else {
       console.log(`Bncr发送通知调用API失败：${response.data.msg}`);
