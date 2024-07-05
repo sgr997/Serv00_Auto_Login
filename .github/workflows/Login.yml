@@ -24,7 +24,7 @@ jobs:
           node-version: '20.x'  
   
       - name: Install dependencies  
-        run: npm install puppeteer  
+        run: npm install puppeteer axios
   
       - name: Create accounts.json  
         run: echo "$ACCOUNTS_JSON" > accounts.json  
